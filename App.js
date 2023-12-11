@@ -1,12 +1,17 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import HomePage from './pages/home-page/HomePage';
+
+const Stack = createStackNavigator();
 
 function App() {
   return (
-    <View>
-      <Text>Test</Text>
-      <Button title="Press me" onPress={() => alert('Button pressed!')} />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomePage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
