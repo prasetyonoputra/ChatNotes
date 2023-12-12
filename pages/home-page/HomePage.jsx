@@ -1,14 +1,20 @@
 import React from "react";
-import { Button, Text, View } from "react-native";
+import { Button, ScrollView, ScrollViewComponent, Text, View } from "react-native";
 
 function HomePage({ navigation }) {
     return (
         <View>
-            <Text>Home Screen</Text>
-            <Button
-                title="Go to Another Screen"
-                onPress={() => navigation.navigate('Login')}
-            />
+            <View>
+                <Text>Search</Text>
+            </View>
+
+            <ScrollView>
+                <Text>Main</Text>
+            </ScrollView>
+
+            <View>
+                <Text>Bottom Bar</Text>
+            </View>
         </View>
     );
 }
