@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, ScrollView, ScrollViewComponent, Text, View } from "react-native";
+import BottomBarComponent from "../../components/bottom-bar/BottomBarComponent";
 
 function HomePage({ navigation }) {
     return (
-        <View>
+        <View style={{height: "100%"}}>
             <View>
                 <Text>Search</Text>
             </View>
@@ -12,8 +13,13 @@ function HomePage({ navigation }) {
                 <Text>Main</Text>
             </ScrollView>
 
-            <View>
-                <Text>Bottom Bar</Text>
+            <View
+                style={{
+                    position: "fixed",
+                    bottom: 0
+                }}
+            >
+                <BottomBarComponent />
             </View>
         </View>
     );
