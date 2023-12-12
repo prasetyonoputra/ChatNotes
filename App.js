@@ -1,18 +1,8 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import HomePage from './pages/home-page/HomePage';
+import * as React from 'react';
+import LoginPage from './pages/login-page/LoginPage';
 
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomePage} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+const App = () => {
+  return <LoginPage />;
+};
 
 export default App;

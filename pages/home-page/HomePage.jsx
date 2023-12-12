@@ -7,7 +7,7 @@ function HomePage({ navigation }) {
             <Text>Home Screen</Text>
             <Button
                 title="Go to Another Screen"
-                onPress={() => navigation.navigate('Another')}
+                onPress={() => navigation.navigate('Login')}
             />
         </View>
     );
