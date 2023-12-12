@@ -1,7 +1,7 @@
-import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Alert, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-function BottomBarComponent() {
+function BottomBarComponent({ setOpenSidebar, openSidebar }) {
     return (
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
             <TouchableOpacity style={styles.loginButton}>
@@ -32,7 +32,7 @@ function BottomBarComponent() {
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={(e) => setOpenSidebar(!openSidebar)}>
                 <Image
                     style={{ width: 40, height: 40 }}
                     source={require("../../assets/icons/icon-menu.png")}
