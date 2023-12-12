@@ -1,12 +1,18 @@
 import React from "react";
 import { Button, ScrollView, ScrollViewComponent, Text, View } from "react-native";
 import BottomBarComponent from "../../components/bottom-bar/BottomBarComponent";
+import SearchNoteComponent from "../../components/search-notes/SearchNoteComponent";
 
 function HomePage({ navigation }) {
     return (
-        <View style={{height: "100%"}}>
-            <View>
-                <Text>Search</Text>
+        <View style={{ height: "100%" }}>
+            <View
+                style={{
+                    position: "fixed",
+                    top: 0
+                }}
+            >
+                <SearchNoteComponent />
             </View>
 
             <ScrollView>
