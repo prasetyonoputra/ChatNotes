@@ -1,8 +1,8 @@
 import * as React from 'react';
-import RegisterPage from './pages/register-page/RegisterPage';
+import ForgotPasswordPage from './pages/forgot-password-page/ForgotPasswordPage';
 
 const App = () => {
-  return <RegisterPage />;
+  return <ForgotPasswordPage />;
 };
 
 export default App;
