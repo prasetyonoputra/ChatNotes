@@ -3,6 +3,7 @@ import { ScrollView, Text, View, StyleSheet, Alert } from "react-native";
 import BottomBarComponent from "../../components/bottom-bar/BottomBarComponent";
 import SearchNoteComponent from "../../components/search-notes/SearchNoteComponent";
 import SidebarComponent from "../../components/sidebar-component/SidebarComponent";
+import NotificationPage from "../notification-page/NotificationPage";
 
 function HomePage({ setNavigate }) {
     const [openSidebar, setOpenSidebar] = useState(false);
@@ -15,7 +16,7 @@ function HomePage({ setNavigate }) {
             </View>
 
             <ScrollView style={styles.main}>
-                <Text>{content}</Text>
+                {content == "notification" && <NotificationPage setNavigate={setNavigate}/>}
             </ScrollView>
 
             <View style={styles.bottomBar}>
