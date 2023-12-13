@@ -4,6 +4,7 @@ import BottomBarComponent from "../../components/bottom-bar/BottomBarComponent";
 import SidebarComponent from "../../components/sidebar-component/SidebarComponent";
 import NotificationPage from "../notification-page/NotificationPage";
 import TopBarComponent from "../../components/top-bar/TopBarComponent";
+import ContactPage from "../contact-page/ContactPage";
 
 function HomePage({ setNavigate }) {
     const [openSidebar, setOpenSidebar] = useState(false);
@@ -17,6 +18,7 @@ function HomePage({ setNavigate }) {
 
             <ScrollView style={styles.main}>
                 {content == "notification" && <NotificationPage setNavigate={setNavigate}/>}
+                {content == "contact" && <ContactPage setNavigate={setNavigate}/>}
             </ScrollView>
 
             <View style={styles.bottomBar}>
