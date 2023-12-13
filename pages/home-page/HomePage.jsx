@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { ScrollView, Text, View, StyleSheet, Alert } from "react-native";
 import BottomBarComponent from "../../components/bottom-bar/BottomBarComponent";
-import SearchNoteComponent from "../../components/search-notes/SearchNoteComponent";
 import SidebarComponent from "../../components/sidebar-component/SidebarComponent";
 import NotificationPage from "../notification-page/NotificationPage";
+import TopBarComponent from "../../components/top-bar/TopBarComponent";
 
 function HomePage({ setNavigate }) {
     const [openSidebar, setOpenSidebar] = useState(false);
@@ -12,7 +12,7 @@ function HomePage({ setNavigate }) {
     return (
         <View style={styles.container}>
             <View style={styles.searchBar}>
-                <SearchNoteComponent />
+                <TopBarComponent />
             </View>
 
             <ScrollView style={styles.main}>
