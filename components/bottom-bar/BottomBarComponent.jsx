@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { Alert, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React, { } from "react";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
-function BottomBarComponent({ setOpenSidebar, openSidebar }) {
+function BottomBarComponent({ setOpenSidebar, openSidebar, setMainContent }) {
     return (
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={(e) => setMainContent("notification")}>
                 <Image
                     style={{ width: 50, height: 50 }}
                     source={require("../../assets/icons/icon-notification.png")}
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={(e) => setMainContent("contact")}>
                 <Image
                     style={{ width: 50, height: 50 }}
                     source={require("../../assets/icons/icon-peoples.png")}
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={(e) => setMainContent("home")}>
                 <Image
                     style={{ width: 50, height: 50 }}
                     source={require("../../assets/icons/icon-home.png")}
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={(e) => setMainContent("message")}>
                 <Image
                     style={{ width: 50, height: 50 }}
                     source={require("../../assets/icons/icon-notification.png")}

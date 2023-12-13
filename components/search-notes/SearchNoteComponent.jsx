@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 function SearchNoteComponent() {
-    const [searchNote, setSearchNote] = useState(null);
+    const [searchNote, setSearchNote] = useState("");
 
     return (
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: "#D9D9D9" }}>

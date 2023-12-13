@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-function ForgotPasswordPage({ navigation }) {
+function ForgotPasswordPage({ setNavigate }) {
     const [email, setEmail] = useState('');
 
     return (
         <View style={styles.container}>
 
             <TouchableOpacity style={styles.backButton}>
-                <Text style={styles.buttonText}>Back</Text>
+                <Text style={styles.buttonText} onPress={(e) => setNavigate("login")}>Back</Text>
             </TouchableOpacity>
 
             <View style={styles.formContainer}>

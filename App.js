@@ -1,9 +1,8 @@
 import * as React from 'react';
-import ForgotPasswordPage from './pages/forgot-password-page/ForgotPasswordPage';
-import HomePage from './pages/home-page/HomePage';
+import Navigation from './Navigation';
 
 const App = () => {
-  return <HomePage />;
+  return <Navigation />;
 };
 
 export default App;

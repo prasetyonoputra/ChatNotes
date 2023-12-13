@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-function RegisterPage({ navigation }) {
+function RegisterPage({ setNavigate }) {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -9,7 +9,7 @@ function RegisterPage({ navigation }) {
     return (
         <View style={styles.container}>
 
-            <TouchableOpacity style={styles.backButton}>
+            <TouchableOpacity style={styles.backButton} onPress={() => setNavigate("login")}>
                 <Text style={styles.buttonText}>Back</Text>
             </TouchableOpacity>
 

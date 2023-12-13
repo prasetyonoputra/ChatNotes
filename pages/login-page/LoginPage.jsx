@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-function LoginPage({ navigation }) {
+function LoginPage({ setNavigate }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -26,12 +26,12 @@ function LoginPage({ navigation }) {
                 <TouchableOpacity
                     style={styles.loginButton}
                 >
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText} onPress={(e) => setNavigate("home")}>Login</Text>
                 </TouchableOpacity>
 
                 <View style={styles.bottomLinksContainer}>
-                    <Text style={styles.linkText} onPress={() => navigation.navigate('Home', {name: 'Jane'})}>Forgot Password</Text>
-                    <Text style={styles.linkText}>Register</Text>
+                    <Text style={styles.linkText} onPress={() => setNavigate("forgot-password")}>Forgot Password</Text>
+                    <Text style={styles.linkText} onPress={() => setNavigate("register")}>Register</Text>
                 </View>
             </View>
         </View>
