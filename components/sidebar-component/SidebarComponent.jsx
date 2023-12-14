@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
-function SidebarComponent({ setOpenSidebar, openSidebar, setNavigate }) {
+function SidebarComponent({ setOpenSidebar, openSidebar, setNavigate, setMainContent }) {
     const renderSidebarButton = (text, onPresshandler) => (
         <TouchableOpacity
             style={styles.sidebarButton}
@@ -34,7 +34,7 @@ function SidebarComponent({ setOpenSidebar, openSidebar, setNavigate }) {
             </View>
 
             <View style={styles.sidebarContent}>
-                {renderSidebarButton("Notes")}
+                {renderSidebarButton("Notes",  (e) => setMainContent("note"))}
                 {renderSidebarButton("Profile")}
                 {renderSidebarButton("Setting")}
                 {renderSidebarButton("Logout", (e) => setNavigate("login"))}
